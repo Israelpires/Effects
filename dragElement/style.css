@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+}
+
+#container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: whitesmoke;
+}
+
+#circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: blue;
+  margin: 20px;
+  transition: 0.2s ease-out;
+}
+#lixeira {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  background: red;
+}
