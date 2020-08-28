@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+#carousel {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 340px;
+  overflow: hidden;
+}
+
+#carousel #slick-group {
+  display: flex;
+  width: max-content;
+}
+
+#previous-button {
+  position: absolute;
+  left: 5px;
+  bottom: 50%;  
+  transform: translateY(+50%);
+  border: 0;
+  width: 40px;
+  height: 70px;
+  border-radius: 10px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#next-button {
+  position: absolute;
+  right: 5px;
+  bottom: 50%;
+  transform: translateY(+50%);
+  border: 0;
+  width: 40px;
+  height: 70px;
+  border-radius: 10px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#slick-buttons {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  list-style: none;
+}
+
+#slick-buttons li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+#slick-buttons li button {
+  display: flex;
+  width: 10px;
+  height: 10px;
+  border: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+#slick-buttons li button::after {
+  content: attr(index);
+  display: none;
+}
+
+#slick-buttons .active {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+}
