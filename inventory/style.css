@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+#inventory-table {
+  display: flex;
+  width: 800px;
+  height: fit-content;
+  background: rgb(209, 209, 209);
+  border-left: 4px solid white;
+  border-top: 4px solid white;
+  border-bottom: 4px solid rgb(128, 128, 128);  
+  border-right: 4px solid rgb(128, 128, 128);
+  padding: 2%;
+  border-radius: 2px;
+  flex-direction: column;
+}
+
+#inventory {
+  display: flex;
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+}
+
+#inventory-list {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+
+}
+
+#inventory-list li {
+  display: flex;
+  width: 11.1%;
+  height: 80px;
+  padding: 2px;
+}
+
+#inventory-list li div {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: rgb(102, 102, 102);
+  border-radius: 2px;
+  
+  border-left: 2px solid rgb(128, 128, 128);
+  border-top: 2px solid rgb(128, 128, 128);
+  border-bottom: 2px solid white;  
+  border-right: 2px solid white;
+}
+
+#inventory-list li div img{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+#my-item {
+  display: flex;
+  width: 100%;
+  height: 40%;
+  padding-top: 2%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#my-item-list {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+
+}
+
+#my-item-list li {
+  display: flex;
+  width: 11.1%;
+  height: 100%;
+  padding: 2px;
+}
+
+#my-item-list li div {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background: rgb(102, 102, 102);
+  border-radius: 2px;
+  justify-content: center;
+  align-items: center;
+  
+  border-left: 2px solid rgb(128, 128, 128);
+  border-top: 2px solid rgb(128, 128, 128);
+  border-bottom: 2px solid white;  
+  border-right: 2px solid white;
+}
+
+#my-item-list li div img {
+  display: flex;
+  width: 80%;
+  height: 80%;
+}
