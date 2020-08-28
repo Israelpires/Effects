@@ -42,21 +42,38 @@ function activateStickButton(previousIndex) {
 activateStickButton(0);
 
 function previous() {
-  xPos += 1600;
   var previousIndex = index - 1;
-  index -= 1;
-  carousel.style.transform = `translate3d(${xPos}px, 0px, 0)`;
-  carousel.style.transition = "500ms";
-  activateStickButton(previousIndex);
+  if(index === 1) {
+    index = carouselElementsCount;
+    xPos = (carouselElementsCount - 1) * -1600;
+    carousel.style.transform = `translate3d(${xPos}px, 0px, 0)`;
+    carousel.style.transition = "500ms";
+    activateStickButton(previousIndex);
+  } else {
+    xPos += 1600;
+    index -= 1;
+    carousel.style.transform = `translate3d(${xPos}px, 0px, 0)`;
+    carousel.style.transition = "500ms";
+    activateStickButton(previousIndex);
+  }
 };
 
 function next() {
-  xPos -= 1600;
   var previousIndex = index - 1;
-  index += 1;
-  carousel.style.transform = `translate3d(${xPos}px, 0px, 0)`;
-  carousel.style.transition = "500ms";
-  activateStickButton(previousIndex);
+  console.log(index);
+  if(index === carouselElementsCount) {
+    index = 1;
+    xPos = 0;
+    carousel.style.transform = `translate3d(0px, 0px, 0)`;
+    carousel.style.transition = "500ms";
+    activateStickButton(previousIndex);
+  }else {
+    xPos -= 1600;
+    index += 1;
+    carousel.style.transform = `translate3d(${xPos}px, 0px, 0)`;
+    carousel.style.transition = "500ms";
+    activateStickButton(previousIndex);
+  }
 };
 
 function goto(e) {
